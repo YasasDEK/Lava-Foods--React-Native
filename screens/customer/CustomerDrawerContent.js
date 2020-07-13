@@ -68,15 +68,6 @@ export function CustomerDrawerContent(props) {
                 props.navigation.navigate('AboutUsScreen');
               }}
             />
-            <DrawerItem
-              icon={({color, size}) => (
-                <Icon name="cart" color={color} size={size} />
-              )}
-              label="cart"
-              onPress={() => {
-                props.navigation.navigate('shoppingCartScreen');
-              }}
-            />
           </Drawer.Section>
           <Drawer.Section title="Preferences">
             <TouchableRipple

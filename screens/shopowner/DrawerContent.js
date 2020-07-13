@@ -40,17 +40,9 @@ export function DrawerContent(props) {
                 <Caption style={styles.caption}>by-Yasas Ekanayaka</Caption>
               </View>
             </View>
-            <View style={styles.row}>
-              <View style={styles.section}>
-                <Paragraph style={[styles.Paragraph, styles.caption]}>
-                  80
-                </Paragraph>
-                <Caption style={styles.Caption}> Oreder Completed</Caption>
-              </View>
-            </View>
           </View>
           <Drawer.Section style={styles.drawerSection}>
-            <DrawerItem
+            {/*<DrawerItem
               icon={({color, size}) => (
                 <Icon name="check" color={color} size={size} />
               )}
@@ -58,7 +50,7 @@ export function DrawerContent(props) {
               onPress={() => {
                 props.navigation.navigate('CompletedOrders');
               }}
-            />
+            />*/}
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="account-check-outline" color={color} size={size} />

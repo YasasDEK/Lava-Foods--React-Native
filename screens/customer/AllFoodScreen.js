@@ -60,14 +60,8 @@ class AllFoodScreen extends Component {
   }
 
   render() {
-    const {search} = this.state;
     return this.state.foodList.length > 0 /*&& search === ''*/ ? (
       <SafeAreaView style={styles.container}>
-        {/*<SearchBar
-          placeholder="Type Here..."
-          onChangeText={this.updateSearch}
-          value={search}
-        />*/}
         <FlatList
           data={this.state.foodList}
           ItemSeparatorComponent={() => (
@@ -122,11 +116,6 @@ class AllFoodScreen extends Component {
       </SafeAreaView>
     ) : (
       <View>
-        <SearchBar
-          placeholder="Type Here..."
-          onChangeText={this.updateSearch}
-          value={search}
-        />
         <View style={styles.textContainer}>
           <Text style={styles.emptyTitle}>No Foods found</Text>
         </View>

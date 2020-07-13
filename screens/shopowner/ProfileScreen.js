@@ -48,14 +48,14 @@ class ProfileScreen extends Component {
                 <View style={styles.userInfoSectiom}>
                   <View
                     style={{
-                      marginLeft: 10,
+                      // marginLeft: 10,
                       flexDirection: 'row',
-                      marginTop: 25,
+                      // marginTop: 25,
                     }}>
                     <ListItem
                       leftAvatar={{
                         size: 100,
-                        marginLeft: 10,
+                        // marginLeft: 10,
                         marginTop: 10,
                         rounded: true,
                         source: {uri: item.imageuri},
@@ -63,8 +63,23 @@ class ProfileScreen extends Component {
                     />
                     <View style={{marginLeft: 15, flexDirection: 'column'}}>
                       <Title style={styles.title}>{item.shopname}</Title>
-                      <Caption style={styles.caption}>@yasasdek</Caption>
+                      <Caption style={styles.caption}>{`@${
+                        item.shopname
+                      }`}</Caption>
                       <Caption style={styles.caption}>User type : Shop</Caption>
+                    </View>
+                    <View style={styles.row1}>
+                      <IconButton
+                        style={styles.iconbutton}
+                        icon="account-edit"
+                        color="#009387"
+                        size={40}
+                        onPress={() =>
+                          this.props.navigation.navigate('EditProfileScreen', {
+                            shopemail: item.shopemail,
+                          })
+                        }
+                      />
                     </View>
                   </View>
                   <View style={styles.row}>
@@ -78,19 +93,6 @@ class ProfileScreen extends Component {
                   <View style={styles.row}>
                     <Text style={styles.title2}>Email</Text>
                     <Caption style={styles.caption2}>{item.shopemail}</Caption>
-                  </View>
-                  <View style={styles.row1}>
-                    <IconButton
-                      style={styles.iconbutton}
-                      icon="account-edit"
-                      color="#009387"
-                      size={40}
-                      onPress={() =>
-                        this.props.navigation.navigate('EditProfileScreen', {
-                          shopemail: item.shopemail,
-                        })
-                      }
-                    />
                   </View>
                 </View>
               );
@@ -143,7 +145,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    marginTop: 30,
+    marginTop: 40,
     fontWeight: 'bold',
   },
   title2: {
@@ -166,7 +168,7 @@ const styles = StyleSheet.create({
   row1: {
     marginTop: 20,
     flexDirection: 'row',
-    marginLeft: 250,
+    // marginLeft: 250,
   },
   section: {
     flexDirection: 'row',
@@ -198,6 +200,7 @@ const styles = StyleSheet.create({
   },
   iconbutton: {
     marginTop: 30,
+    marginLeft: 20,
   },
   image: {
     flex: 1,

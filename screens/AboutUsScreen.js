@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import {StyleSheet, ImageBackground} from 'react-native';
 
 const AboutUsScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>About us</Text>
-    </View>
+    <ImageBackground
+      source={require('../images/test11.jpg')}
+      style={styles.image}
+    />
   );
 };
 
@@ -15,6 +16,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    flex: 1,
+    resizeMode: 'cover',
     justifyContent: 'center',
   },
 });

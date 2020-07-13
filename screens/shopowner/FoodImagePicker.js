@@ -34,7 +34,7 @@ const FoodImagePick = ({image, onImagePicked}) => {
         <Image source={selectedImage} style={styles.previewImage} />
       </View>
       <View styels={styles.button}>
-        <Button title="Pick Image" onPress={pickImageHandler} />
+        <Button color="#009387" title="Pick Image" onPress={pickImageHandler} />
       </View>
     </View>
   );

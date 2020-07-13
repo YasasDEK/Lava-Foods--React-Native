@@ -1,24 +1,21 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Button,
-  StyleSheet,
-  StatusBar,
-  ImageBackground,
-} from 'react-native';
-import {useTheme} from '@react-navigation/native';
+import {StyleSheet, ImageBackground, Button, View} from 'react-native';
 
 const HomeScreen = ({navigation}) => {
-  const {colors} = useTheme();
-
-  const theme = useTheme();
-
   return (
     <ImageBackground
       source={require('../images/test.jpg')}
-      style={styles.image}
-    />
+      style={styles.image}>
+      <View style={styles.button}>
+        <Button
+          color="#009387"
+          title="Add new foods"
+          onPress={() => {
+            navigation.navigate('Add Food');
+          }}
+        />
+      </View>
+    </ImageBackground>
   );
 };
 
@@ -34,5 +31,10 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center',
+  },
+  button: {
+    marginTop: 50,
+    marginLeft: 50,
+    marginRight: 50,
   },
 });

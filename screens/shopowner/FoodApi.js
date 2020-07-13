@@ -144,3 +144,24 @@ export async function confirmOrder() {
     Alert.alert('Order placed');
   }
 }
+
+export async function getAllFoods(foodsRetreived) {
+  var detailList = [];
+  var user = firebase.auth().currentUser;
+  await firebase
+    .firestore()
+    .collection('orders')
+    .where('user', '==', user.phoneNumber)
+    .onSnapshot(querySnapshot => {
+      querySnapshot.forEach(documentSnapshot => {
+        const detailItem = documentSnapshot.data();
+        detailItem.id = documentSnapshot.id;
+        if (!detailList.includes(detailItem)) {
+          detailList.push(detailItem);
+        }
+      });
+      foodsRetreived(detailList);
+      detailList = [];
+    });
+  detailList = [];
+}

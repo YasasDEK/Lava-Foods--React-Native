@@ -133,12 +133,12 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   button: {
-    marginLeft: 180,
-    // marginRight: 50,
+    marginLeft: 130,
+    marginRight: 10,
     marginBottom: 10,
   },
   buttons: {
-    marginLeft: 20,
+    // marginLeft: 20,
     marginRight: 100,
     marginBottom: 10,
   },

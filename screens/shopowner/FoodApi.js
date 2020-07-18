@@ -132,7 +132,7 @@ export async function confirmOrder() {
       .collection('orders')
       .add({
         order: orderList,
-        user: user.phoneNumber,
+        user: user.email,
         total: total,
         date: today,
       });
@@ -151,7 +151,7 @@ export async function getAllFoods(foodsRetreived) {
   await firebase
     .firestore()
     .collection('orders')
-    .where('user', '==', user.phoneNumber)
+    .where('user', '==', user.email)
     .onSnapshot(querySnapshot => {
       querySnapshot.forEach(documentSnapshot => {
         const detailItem = documentSnapshot.data();

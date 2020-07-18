@@ -7,6 +7,8 @@ import SignInScreen from './SignInScreen';
 import SignUpScreen from './SignUpScreen';
 import NavScreen from './NavScreen';
 import MobileVeryScreen from './MobileVeryScreen';
+import SignInCustomerScreen from './SignInCustomerScreen';
+import SignUpCustomerScreen from './SignUpCustomerScreen';
 const RootStack = createStackNavigator();
 
 const RootStackScreen = ({navigation}) => (
@@ -16,6 +18,8 @@ const RootStackScreen = ({navigation}) => (
     <RootStack.Screen name="MobileVeryScreen" component={MobileVeryScreen} />
     <RootStack.Screen name="SignInScreen" component={SignInScreen} />
     <RootStack.Screen name="SignUpScreen" component={SignUpScreen} />
+    <RootStack.Screen name="SignInCustomerScreen" component={SignInCustomerScreen} />
+    <RootStack.Screen name="SignUpCustomerScreen" component={SignUpCustomerScreen} />
   </RootStack.Navigator>
 );
 

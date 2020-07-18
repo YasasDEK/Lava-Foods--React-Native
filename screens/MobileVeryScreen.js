@@ -87,8 +87,18 @@ const MobileVeryScreen = ({ navigation }) => {
     };
 
     const loginHandle = (mobile) => {
+        // firebase.auth().languageCode = 'it';
+        // window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+        //     'size': 'invisible',
+        //     'callback': function(response) {
+        //       // reCAPTCHA solved, allow signInWithPhoneNumber.
+        //       onSignInSubmit();
+        //     }
+        //   });
+        //   var appVerifier = window.recaptchaVerifier;
+        // var reCAPTCHA = new firebase.auth.RecaptchaVerifier('recaptcha');
         if (mobile.length === 12) {
-            firebase.auth().signInWithPhoneNumber(mobile).then(confirmResult => {
+            firebase.auth().signInWithPhoneNumber(mobile/*,reCAPTCHA*/).then(confirmResult => {
                 setData({
                     ...data,
                     confirmResult: confirmResult,

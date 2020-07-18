@@ -43,9 +43,8 @@ export function CustomerDrawerContent(props) {
             <View style={styles.row}>
               <View style={styles.section}>
                 <Paragraph style={[styles.Paragraph, styles.caption]}>
-                  80
+                  Click & Oreder
                 </Paragraph>
-                <Caption style={styles.Caption}>My Oreder</Caption>
               </View>
             </View>
           </View>

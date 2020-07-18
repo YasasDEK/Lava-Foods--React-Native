@@ -27,7 +27,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useTheme } from 'react-native-paper';
 
-const SignInScreen = ({ navigation }) => {
+const SignUpScreen = ({ navigation }) => {
 
     const { colors } = useTheme();
 
@@ -191,6 +191,7 @@ const SignInScreen = ({ navigation }) => {
                 onPress={() => navigation.navigate('SignInScreen')}
             />
                 <Text style={styles.text_header}>Register Now!</Text>
+                <Text style={styles.text}>Sign up as a shop owner</Text>
             </View>
             <Animatable.View
                 animation="fadeInUpBig"
@@ -409,7 +410,7 @@ const SignInScreen = ({ navigation }) => {
     );
 };
 
-export default SignInScreen;
+export default SignUpScreen;
 
 const styles = StyleSheet.create({
     container: {
@@ -420,7 +421,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-        paddingBottom: 50
+        paddingBottom: 50,
+        marginTop: 30,
     },
     footer: {
         flex: Platform.OS === 'ios' ? 3 : 5,
@@ -451,6 +453,11 @@ const styles = StyleSheet.create({
         marginTop: Platform.OS === 'ios' ? 0 : -12,
         paddingLeft: 10,
         color: '#05375a',
+    },
+    text: {
+      color: 'white',
+      marginTop: 5,
+      fontSize: 18,
     },
     button: {
         alignItems: 'center',

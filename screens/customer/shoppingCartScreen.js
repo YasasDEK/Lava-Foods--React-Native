@@ -182,8 +182,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   price2: {
-    marginLeft: 40,
-    marginRight: 40,
+    marginLeft: 30,
+    marginRight: 10,
     marginBottom: 10,
   },
   list: {

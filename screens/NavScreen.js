@@ -37,7 +37,7 @@ const NavScreen = ({navigation}) => {
         <Text style={styles.title}>WHO ARE YOU?</Text>
         <View style={styles.button}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('MobileVeryScreen')}
+            onPress={() => navigation.navigate('SignInCustomerScreen')}
             style={[styles.signIn, {borderColor: '#009387', borderWidth: 1}]}>
             <Text style={[styles.textSign, {color: '#009387'}]}>
               A HUNGRY CUSTOMER

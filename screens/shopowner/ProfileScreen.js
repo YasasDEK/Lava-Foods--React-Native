@@ -61,7 +61,7 @@ class ProfileScreen extends Component {
                         source: {uri: item.imageuri},
                       }}
                     />
-                    <View style={{marginLeft: 15, flexDirection: 'column'}}>
+                    <View style={{ flexDirection: 'column'}}>
                       <Title style={styles.title}>{item.shopname}</Title>
                       <Caption style={styles.caption}>{`@${
                         item.shopname
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   userInfoSectiom: {
-    paddingLeft: 20,
+    paddingLeft: 15,
   },
   title: {
     fontSize: 20,
@@ -199,8 +199,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   iconbutton: {
-    marginTop: 30,
-    marginLeft: 20,
+    marginTop: 20,
+    marginLeft: 15,
   },
   image: {
     flex: 1,

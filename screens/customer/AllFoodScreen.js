@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   price: {
-    marginLeft: 250,
+    marginLeft: 230,
     marginRight: 30,
     marginBottom: 10,
   },

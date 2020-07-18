@@ -91,17 +91,18 @@ const styles = StyleSheet.create({
   },
   title2: {
     color: '#05375a',
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: 'bold',
   },
   text: {
     color: 'grey',
     marginTop: 5,
-    fontSize: 20,
+    fontSize: 18,
   },
   button: {
     alignItems: 'flex-end',
     marginTop: 30,
+    marginRight: 50,
   },
   signIn: {
     width: 150,

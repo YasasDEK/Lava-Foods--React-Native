@@ -136,6 +136,7 @@ const SignInScreen = ({ navigation }) => {
             <StatusBar backgroundColor='#009387' barStyle="light-content" />
             <View style={styles.header}>
                 <Text style={styles.text_header}>Welcome!</Text>
+                <Text style={styles.text}>Login as a shop owner</Text>
             </View>
             <Animatable.View
                 animation="fadeInUpBig"
@@ -275,6 +276,11 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 30,
         paddingHorizontal: 20,
         paddingVertical: 30
+    },
+    text: {
+      color: 'white',
+      marginTop: 5,
+      fontSize: 18,
     },
     text_header: {
         color: '#fff',

@@ -62,11 +62,11 @@ class ProfileScreen extends Component {
                       }}
                     />
                     <View style={{ flexDirection: 'column'}}>
-                      <Title style={styles.title}>{item.shopname}</Title>
-                      <Caption style={styles.caption}>{`@${
+                      <Text style={styles.title}>{item.shopname}</Text>
+                      <Text style={styles.caption}>{`@${
                         item.shopname
-                      }`}</Caption>
-                      <Caption style={styles.caption}>User type : Shop</Caption>
+                      }`}</Text>
+                      <Text style={styles.caption}>User type : Shop</Text>
                     </View>
                     <View style={styles.row1}>
                       <IconButton
@@ -84,15 +84,15 @@ class ProfileScreen extends Component {
                   </View>
                   <View style={styles.row}>
                     <Text style={styles.title2}>Owner</Text>
-                    <Caption style={styles.caption2}>{item.ownername}</Caption>
+                    <Text style={styles.caption2}>{item.ownername}</Text>
                   </View>
                   <View style={styles.row}>
                     <Text style={styles.title2}>Mobile</Text>
-                    <Caption style={styles.caption2}>{item.shopmobile}</Caption>
+                    <Text style={styles.caption1}>{item.shopmobile}</Text>
                   </View>
                   <View style={styles.row}>
                     <Text style={styles.title2}>Email</Text>
-                    <Caption style={styles.caption2}>{item.shopemail}</Caption>
+                    <Text style={styles.caption3}>{item.shopemail}</Text>
                   </View>
                 </View>
               );
@@ -144,9 +144,10 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   title: {
-    fontSize: 20,
+    fontSize: 25,
     marginTop: 40,
     fontWeight: 'bold',
+    marginRight: 20,
   },
   title2: {
     fontSize: 20,
@@ -155,10 +156,22 @@ const styles = StyleSheet.create({
   caption: {
     fontSize: 14,
     lineHeight: 14,
+    color: '#5c5756',
+  },
+  caption1: {
+    fontSize: 20,
+    marginLeft: 47,
+    color: '#5c5756',
   },
   caption2: {
     fontSize: 20,
     marginLeft: 50,
+    color: '#5c5756',
+  },
+  caption3: {
+    fontSize: 20,
+    marginLeft: 58,
+    color: '#5c5756',
   },
   row: {
     marginTop: 20,
@@ -200,7 +213,7 @@ const styles = StyleSheet.create({
   },
   iconbutton: {
     marginTop: 20,
-    marginLeft: 15,
+    // marginLeft: 40,
   },
   image: {
     flex: 1,

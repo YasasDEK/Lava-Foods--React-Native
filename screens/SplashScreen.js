@@ -29,6 +29,7 @@ const SplashScreen = ({navigation}) => {
           resizeMode="stretch"
         />
         <Text style={styles.title}>LAVA FOODS</Text>
+        <Text style={styles.title3}>E.M.Y.D Ekanayaka - 17000343</Text>
       </View>
       <Animatable.View
         style={[styles.footer, {backgroundColor: '#fff'}]}
@@ -36,7 +37,7 @@ const SplashScreen = ({navigation}) => {
         <View style={styles.views}>
           <View style={styles.views2}>
             <Text style={styles.title2}>Eat & Sell</Text>
-            <Text style={styles.text}>Sign in with account</Text>
+            <Text style={styles.text}>Sign in with an account</Text>
           </View>
           <View style={styles.button}>
             <TouchableOpacity onPress={() => navigation.navigate('NavScreen')}>
@@ -93,6 +94,11 @@ const styles = StyleSheet.create({
     color: '#05375a',
     fontSize: 25,
     fontWeight: 'bold',
+    marginLeft: 40,
+    marginRight: 40,
+    // justifyContent: 'center',
+    // alignContent: 'center',
+    // alignItems: 'center',
   },
   text: {
     color: 'grey',
@@ -102,7 +108,6 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'flex-end',
     marginTop: 30,
-    marginRight: 50,
   },
   signIn: {
     width: 150,
@@ -111,19 +116,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 50,
     flexDirection: 'row',
-    marginLeft: 20,
-    // marginBottom: 2000,
   },
   textSign: {
     color: 'white',
     fontWeight: 'bold',
   },
   views: {
-    flexDirection: 'row',
-    marginTop: 40,
+    alignItems: 'center',
   },
   views2: {
     flexDirection: 'column',
+    marginTop: 20,
+  },
+  title3: {
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 20,
   },
 });
